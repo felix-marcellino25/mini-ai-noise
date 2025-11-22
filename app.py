@@ -12,7 +12,7 @@ import tempfile
 INFLUXDB_URL = "https://us-west-2-1.aws.cloud2.influxdata.com"
 INFLUXDB_TOKEN = st.secrets["INFLUXDB_TOKEN"] if "INFLUXDB_TOKEN" in st.secrets else "2MuIXyIyj8YHMLEH6bLjUxcRyWie8RowDMmhgSLT580j7y4KFCHdIajbw0rdav1OaMlBP3YqzNMaFM9LKPWB9Q=="
 INFLUXDB_ORG = "3f99312a36600ebf"
-INFLUXDB_BUCKET = "UjiCobaAI2025
+INFLUXDB_BUCKET = "UjiCobaAI2025"
 
 # Untuk development lokal, bisa hardcode token (jangan commit ke GitHub!)
 # INFLUXDB_TOKEN = "x8aBc...xyz"
