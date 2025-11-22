@@ -7,6 +7,7 @@ from influxdb_client import InfluxDBClient, Point
 from influxdb_client.client.write_api import SYNCHRONOUS
 import os
 import tempfile
+import base64
 
 # --- Informasi Mahasiswa ---
 NAMA = "Felix Marcellino Henrikus"
@@ -16,21 +17,21 @@ FAKULTAS = "Fakultas Sains dan Matematika"
 UNIVERSITAS = "Universitas Kristen Satya Wacana"
 
 # --- Tampilan Header ---
-col1, col2 = st.columns([2, 3])
-
-with col1:
-    st.image("logo_univ.png", width=70)
-    st.image("logo_fakultas.png", width=70)
-    
-with col2:
-    st.markdown(f"""
-    <div style="text-align: left; margin-top: 10px;">
+st.markdown(f"""
+<div style="display: flex; align-items: center; gap: 15px; padding: 10px; background-color: #cbcbd4; border-bottom: 1px solid #ddd;">
+    <div style="flex-shrink: 0;">
+        <img src="data:image/png;base64,{base64.b64encode(open('logo_univ.png', 'rb').read()).decode()}" width="80" />
+    </div>
+    <div style="flex-shrink: 0;">
+        <img src="data:image/png;base64,{base64.b64encode(open('logo_fakultas.png', 'rb').read()).decode()}" width="80" />
+    </div>
+    <div style="flex-grow: 1; text-align: center; margin-left: 10px;">
         <h3 style="margin: 0; color: #435da3;">{NAMA} • NIM: {NIM}</h3>
         <p style="margin: 4px 0; color: #435da3;"><strong>{PRODI} • {FAKULTAS}</strong></p>
         <p style="margin: 0; color: #435da3;">{UNIVERSITAS}</p>       
     </div>
-    """, unsafe_allow_html=True)
-
+</div>
+""", unsafe_allow_html=True)
 st.markdown("---")
 
 st.markdown("""
