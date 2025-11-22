@@ -160,11 +160,11 @@ st.markdown("---")
 st.markdown("""
 ### 📌 Tentang Proyek Ini
 
-Proyek ini merupakan tugas mata kuliah **Artificial Intelligence** yang bertujuan untuk membangun sistem Mini AI yang mampu mengklasifikasikan tingkat kebisingan sebagai “aman” atau “tidak aman”, serta memberikan rekomendasi durasi maksimal paparan kebisingan yang aman bagi pendengaran manusia.
+Proyek ini merupakan tugas mata kuliah **Artificial Intelligence** yang bertujuan untuk membangun sistem AI yang mampu mengklasifikasikan tingkat kebisingan sebagai “aman” atau “tidak aman”, serta memberikan rekomendasi durasi maksimal paparan kebisingan yang aman bagi pendengaran manusia.
 Sistem ini dibangun menggunakan:
-- **Machine Learning** (model Decision Tree) untuk klasifikasi
+- **Machine Learning** (model *Decision Tree*) untuk klasifikasi
 - **Streamlit** sebagai dashboard interaktif
-- **InfluxDB Cloud** sebagai database penyimpanan histori
+- **InfluxDB Cloud** sebagai *database* penyimpanan histori
 
 ### 👨‍🏫 Dosen Pengampu:
 - Dr. Suryasatriya Trihandaru, M.Sc.nat.
@@ -174,5 +174,5 @@ Sistem ini dibangun menggunakan:
 - Denny Indrajaya, M.Si.D.
 
 ### 📌 Rekomendasi
-*Estimasi kebisingan dari file audio belum terkalibrasi, gunakan SPL meter yang terkalibrasi.*
+Estimasi kebisingan dari file audio belum terkalibrasi, gunakan SPL meter yang terkalibrasi.
 """, unsafe_allow_html=True)
