@@ -16,17 +16,18 @@ FAKULTAS = "Fakultas Sains dan Matematika"
 UNIVERSITAS = "Universitas Kristen Satya Wacana"
 
 # --- Tampilan Header ---
-col1, col2 = st.columns([1, 4])
+col1, col2 = st.columns([1, 1, 3])
 
 with col1:
-    st.image("logo_univ.png", width=80)  # Sesuaikan lebar
-
+    st.image("logo_univ.png", width=100)
 with col2:
+    st.image("logo_fakultas.png", width=100)
+with col3:
     st.markdown(f"""
     <div style="text-align: left; margin-top: 10px;">
-        <h3 style="margin: 0; color: #2c3e50;">{UNIVERSITAS}</h3>
+        <h3 style="margin: 4px 0; color: #7f8c8d;">{NAMA} • NIM: {NIM}</h3>
         <p style="margin: 4px 0; color: #34495e;"><strong>{FAKULTAS}</strong> – {PRODI}</p>
-        <p style="margin: 4px 0; color: #7f8c8d;">{NAMA} • NIM: {NIM}</p>
+        <p style="margin: 0; color: #2c3e50;">{UNIVERSITAS}</p>       
     </div>
     """, unsafe_allow_html=True)
 
@@ -112,7 +113,8 @@ def estimate_db_from_audio(file_path):
     return max(0, db)
 
 # --- UI ---
-st.title("🔊 Mini AI: Klasifikasi Kebisingan")
+ --- Judul Utama ---
+st.markdown("<h1 style='text-align: center; color: #2c3e50;'>🔊 Arsitektur Artificial Intelligence untuk Klasifikasi Kebisingan menggunakan Machine Learning</h1>", unsafe_allow_html=True)
 st.write("Pilih cara input: masukkan nilai dB atau upload file audio (.wav).")
 
 tab1, tab2 = st.tabs(["Input Nilai dB", "Upload File Audio"])
@@ -160,4 +162,22 @@ with tab2:
 
 # --- Catatan kecil ---
 st.markdown("---")
-st.caption("📌 Estimasi dB dari file audio bersifat **relatif** dan **tidak terkalibrasi**. Untuk hasil akurat, gunakan SPL meter terkalibrasi.")
+st.markdown("""
+### 📌 Tentang Proyek Ini
+
+Proyek ini merupakan tugas mata kuliah **Artificial Intelligence** yang bertujuan untuk membangun sistem Mini AI yang mampu mengklasifikasikan tingkat kebisingan sebagai “aman” atau “tidak aman”, serta memberikan rekomendasi durasi maksimal paparan kebisingan yang aman bagi pendengaran manusia.
+Sistem ini dibangun menggunakan:
+- **Machine Learning** (model Decision Tree) untuk klasifikasi
+- **Streamlit** sebagai dashboard interaktif
+- **InfluxDB Cloud** sebagai database penyimpanan histori prediksi
+
+### 👨‍🏫 Dosen Pengampu:
+- Dr. Suryasatriya Trihandaru, M.Sc.nat.
+- Prof. Hanna Arini Parhusip, M.Sc.nat.
+- Dr. Bambang Susanto, MS.
+- Prof. Eko Sediyono, M.Kom.
+- Denny Indrajaya, M.Si.D.
+
+### 📌 Rekomendasi
+*Estimasi dB dari file audio bersifat relatif dan belum terkalibrasi. Untuk hasil akurat, gunakan SPL meter terkalibrasi.*
+""", unsafe_allow_html=True)
