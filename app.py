@@ -8,6 +8,53 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 import os
 import tempfile
 
+# --- Informasi Mahasiswa ---
+NAMA = "Felix Marcellino Henrikus"
+NIM = "632025006"
+PRODI = "Magister Sains Data"
+FAKULTAS = "Fakultas Sains dan Matematika"
+UNIVERSITAS = "Universitas Kristen Satya Wacana"
+
+# --- Tampilan Header ---
+col1, col2 = st.columns([1, 4])
+
+with col1:
+    st.image("logo_univ.png", width=80)  # Sesuaikan lebar
+
+with col2:
+    st.markdown(f"""
+    <div style="text-align: left; margin-top: 10px;">
+        <h3 style="margin: 0; color: #2c3e50;">{UNIVERSITAS}</h3>
+        <p style="margin: 4px 0; color: #34495e;"><strong>{FAKULTAS}</strong> – {PRODI}</p>
+        <p style="margin: 4px 0; color: #7f8c8d;">{NAMA} • NIM: {NIM}</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.markdown("---")
+
+st.markdown("""
+<style>
+    .main {
+        background-color: #f9f9fb;
+    }
+    .stButton>button {
+        background-color: #3498db;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        padding: 8px 16px;
+    }
+    .stButton>button:hover {
+        background-color: #2980b9;
+    }
+    h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # --- Konfigurasi InfluxDB (ganti dengan milikmu) ---
 INFLUXDB_URL = "https://us-east-1-1.aws.cloud2.influxdata.com"
 INFLUXDB_TOKEN = st.secrets["INFLUXDB_TOKEN"] if "INFLUXDB_TOKEN" in st.secrets else "-9LaPT1-_kT-Pp7k-StlXSzkuUPBWXskzeBO7cI1J1jBQ-txIZueGCz0igXqejlcYqA53V0l4QMBi-AQAGA34Q=="
