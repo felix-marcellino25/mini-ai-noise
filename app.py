@@ -14,16 +14,16 @@ NAMA = "Felix Marcellino Henrikus"
 NIM = "632025006"
 PRODI = "Magister Sains Data"
 FAKULTAS = "Fakultas Sains dan Matematika"
-UNIVERSITAS = "Universitas Kristen Satya Wacana"
+UNIVERSITAS = "Universitas Kristen Satya Wacana Salatiga"
 
 # --- Tampilan Header ---
 st.markdown(f"""
 <div style="display: flex; align-items: center; gap: 15px; padding: 10px; background-color: #f9f9fb; border-bottom: 1px solid #ddd;">
     <div style="flex-shrink: 0;">
-        <img src="data:image/png;base64,{base64.b64encode(open('logo_univ.png', 'rb').read()).decode()}" width="80" />
+        <img src="data:image/png;base64,{base64.b64encode(open('logo_univ.png', 'rb').read()).decode()}" width="100" />
     </div>
     <div style="flex-shrink: 0;">
-        <img src="data:image/png;base64,{base64.b64encode(open('logo_fakultas.png', 'rb').read()).decode()}" width="80" />
+        <img src="data:image/png;base64,{base64.b64encode(open('logo_fakultas.png', 'rb').read()).decode()}" width="100" />
     </div>
     <div style="flex-grow: 1; text-align: left; margin-left: 10px;">
         <h2 style="margin: 0; color: #435da3;">{NAMA} • {NIM}</h2>
@@ -109,7 +109,7 @@ def estimate_db_from_audio(file_path):
     return max(0, db)
 
 # --- UI ---
-st.markdown("<h1 style='text-align: center; color: #4071f7;'>🔊 Arsitektur Artificial Intelligence untuk Klasifikasi Kebisingan menggunakan Machine Learning</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #435da3;'>🔊 Arsitektur Artificial Intelligence untuk Klasifikasi Kebisingan menggunakan Machine Learning</h1>", unsafe_allow_html=True)
 st.write("Pilih cara input: masukkan nilai kebisingan atau upload file audio (dalam format .wav).")
 
 tab1, tab2 = st.tabs(["Input Nilai dB", "Upload File Audio"])
