@@ -113,7 +113,6 @@ def estimate_db_from_audio(file_path):
     return max(0, db)
 
 # --- UI ---
- --- Judul Utama ---
 st.markdown("<h1 style='text-align: center; color: #2c3e50;'>🔊 Arsitektur Artificial Intelligence untuk Klasifikasi Kebisingan menggunakan Machine Learning</h1>", unsafe_allow_html=True)
 st.write("Pilih cara input: masukkan nilai dB atau upload file audio (.wav).")
 
