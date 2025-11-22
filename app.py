@@ -18,14 +18,14 @@ UNIVERSITAS = "Universitas Kristen Satya Wacana"
 
 # --- Tampilan Header ---
 st.markdown(f"""
-<div style="display: flex; align-items: center; gap: 15px; padding: 10px; background-color: #cbcbd4; border-bottom: 1px solid #ddd;">
+<div style="display: flex; align-items: center; gap: 15px; padding: 10px; background-color: #f9f9fb; border-bottom: 1px solid #ddd;">
     <div style="flex-shrink: 0;">
         <img src="data:image/png;base64,{base64.b64encode(open('logo_univ.png', 'rb').read()).decode()}" width="80" />
     </div>
     <div style="flex-shrink: 0;">
         <img src="data:image/png;base64,{base64.b64encode(open('logo_fakultas.png', 'rb').read()).decode()}" width="80" />
     </div>
-    <div style="flex-grow: 1; text-align: center; margin-left: 10px;">
+    <div style="flex-grow: 1; text-align: left; margin-left: 10px;">
         <h3 style="margin: 0; color: #435da3;">{NAMA} • NIM: {NIM}</h3>
         <p style="margin: 4px 0; color: #435da3;"><strong>{PRODI} • {FAKULTAS}</strong></p>
         <p style="margin: 0; color: #435da3;">{UNIVERSITAS}</p>       
