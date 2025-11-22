@@ -116,7 +116,7 @@ tab1, tab2 = st.tabs(["Input Nilai dB", "Upload File Audio"])
 
 # Tab 1: Input Manual
 with tab1:
-    noise_dB = st.number_input("Level Kebisingan (dB)", min_value=0.0, max_value=140.0, value=85.0, step=1.0)
+    noise_dB = st.number_input("Level Kebisingan (dB)", min_value=0.0, max_value=150.0, value=80.0, step=0.5)
     if st.button("Klasifikasi (dB)"):
         is_safe = model.predict([[noise_dB]])[0]
         status = "✅ Aman" if is_safe else "⚠️ Tidak Aman"
