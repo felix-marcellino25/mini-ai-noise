@@ -10,7 +10,7 @@ import tempfile
 
 # --- Konfigurasi InfluxDB (ganti dengan milikmu) ---
 INFLUXDB_URL = "https://us-west-2-1.aws.cloud2.influxdata.com"
-INFLUXDB_TOKEN = st.secrets["INFLUXDB_TOKEN"] if "INFLUXDB_TOKEN" in st.secrets else "2MuIXyIyj8YHMLEH6bLjUxcRyWie8RowDMmhgSLT580j7y4KFCHdIajbw0rdav1OaMlBP3YqzNMaFM9LKPWB9Q=="
+INFLUXDB_TOKEN = st.secrets["INFLUXDB_TOKEN"] if "INFLUXDB_TOKEN" in st.secrets else "t_BjDK-nSn-YznvgkSb75qL2nKy96kppDpJdZn_J1Xb7r9nvwBh64YepbOgw0mqiz-kGq2M8XyA2ERy1Zop_0A=="
 INFLUXDB_ORG = "3f99312a36600ebf"
 INFLUXDB_BUCKET = "UjiCobaAI2025"
 
