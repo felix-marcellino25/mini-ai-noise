@@ -26,7 +26,7 @@ st.markdown(f"""
         <img src="data:image/png;base64,{base64.b64encode(open('logo_fakultas.png', 'rb').read()).decode()}" width="80" />
     </div>
     <div style="flex-grow: 1; text-align: left; margin-left: 10px;">
-        <h3 style="margin: 0; color: #435da3;">{NAMA} • NIM: {NIM}</h3>
+        <h2 style="margin: 0; color: #435da3;">{NAMA} • {NIM}</h2>
         <p style="margin: 4px 0; color: #435da3;"><strong>{PRODI} • {FAKULTAS}</strong></p>
         <p style="margin: 0; color: #435da3;">{UNIVERSITAS}</p>       
     </div>
@@ -164,7 +164,7 @@ Proyek ini merupakan tugas mata kuliah **Artificial Intelligence** yang bertujua
 Sistem ini dibangun menggunakan:
 - **Machine Learning** (model Decision Tree) untuk klasifikasi
 - **Streamlit** sebagai dashboard interaktif
-- **InfluxDB Cloud** sebagai database penyimpanan histori prediksi
+- **InfluxDB Cloud** sebagai database penyimpanan histori
 
 ### 👨‍🏫 Dosen Pengampu:
 - Dr. Suryasatriya Trihandaru, M.Sc.nat.
@@ -174,5 +174,5 @@ Sistem ini dibangun menggunakan:
 - Denny Indrajaya, M.Si.D.
 
 ### 📌 Rekomendasi
-*Estimasi dB dari file audio bersifat relatif dan belum terkalibrasi. Untuk hasil akurat, gunakan SPL meter terkalibrasi.*
+*Estimasi kebisingan dari file audio belum terkalibrasi, gunakan SPL meter yang terkalibrasi.*
 """, unsafe_allow_html=True)
