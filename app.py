@@ -16,7 +16,7 @@ FAKULTAS = "Fakultas Sains dan Matematika"
 UNIVERSITAS = "Universitas Kristen Satya Wacana"
 
 # --- Tampilan Header ---
-col1, col2 = st.columns([1, 1, 3])
+col1, col2, col3 = st.columns([1, 1, 3])
 
 with col1:
     st.image("logo_univ.png", width=100)
