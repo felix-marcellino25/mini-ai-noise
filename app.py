@@ -16,18 +16,18 @@ FAKULTAS = "Fakultas Sains dan Matematika"
 UNIVERSITAS = "Universitas Kristen Satya Wacana"
 
 # --- Tampilan Header ---
-col1, col2, col3 = st.columns([1, 1, 3])
+col1, col2 = st.columns([1, 4])
 
 with col1:
     st.image("logo_univ.png", width=100)
-with col2:
     st.image("logo_fakultas.png", width=100)
-with col3:
+    
+with col2:
     st.markdown(f"""
     <div style="text-align: left; margin-top: 10px;">
-        <h3 style="margin: 4px 0; color: #7f8c8d;">{NAMA} • NIM: {NIM}</h3>
-        <p style="margin: 4px 0; color: #34495e;"><strong>{FAKULTAS}</strong> – {PRODI}</p>
-        <p style="margin: 0; color: #2c3e50;">{UNIVERSITAS}</p>       
+        <h3 style="margin: 0; color: #435da3;">{NAMA} • NIM: {NIM}</h3>
+        <p style="margin: 4px 0; color: #435da3;"><strong>{PRODI} • {FAKULTAS}</strong></p>
+        <p style="margin: 0; color: #435da3;">{UNIVERSITAS}</p>       
     </div>
     """, unsafe_allow_html=True)
 
@@ -36,7 +36,7 @@ st.markdown("---")
 st.markdown("""
 <style>
     .main {
-        background-color: #f9f9fb;
+        background-color: #cbcbd4;
     }
     .stButton>button {
         background-color: #3498db;
@@ -47,11 +47,6 @@ st.markdown("""
     }
     .stButton>button:hover {
         background-color: #2980b9;
-    }
-    h1 {
-        color: #2c3e50;
-        text-align: center;
-        margin-bottom: 10px;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -113,8 +108,8 @@ def estimate_db_from_audio(file_path):
     return max(0, db)
 
 # --- UI ---
-st.markdown("<h1 style='text-align: center; color: #2c3e50;'>🔊 Arsitektur Artificial Intelligence untuk Klasifikasi Kebisingan menggunakan Machine Learning</h1>", unsafe_allow_html=True)
-st.write("Pilih cara input: masukkan nilai dB atau upload file audio (.wav).")
+st.markdown("<h1 style='text-align: center; color: #4071f7;'>🔊 Arsitektur Artificial Intelligence untuk Klasifikasi Kebisingan menggunakan Machine Learning</h1>", unsafe_allow_html=True)
+st.write("Pilih cara input: masukkan nilai kebisingan atau upload file audio (dalam format .wav).")
 
 tab1, tab2 = st.tabs(["Input Nilai dB", "Upload File Audio"])
 
