@@ -172,7 +172,4 @@ Sistem ini dibangun menggunakan:
 - Dr. Bambang Susanto, MS.
 - Prof. Eko Sediyono, M.Kom.
 - Denny Indrajaya, M.Si.D.
-
-### 📌 Rekomendasi
-Estimasi kebisingan dari file audio belum terkalibrasi, gunakan SPL meter yang terkalibrasi.
 """, unsafe_allow_html=True)
