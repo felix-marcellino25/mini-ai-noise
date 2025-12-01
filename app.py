@@ -10,8 +10,10 @@ import tempfile
 import base64
 
 # --- Informasi Mahasiswa ---
-NAMA = "Felix Marcellino Henrikus"
-NIM = "632025006"
+NAMA_1 = "Felix Marcellino Henrikus"
+NAMA_2 = "Nathaniel Kurniawan Soedarso"
+NIM_1 = "632025006"
+NIM_2 = "632025002"
 PRODI = "Magister Sains Data"
 FAKULTAS = "Fakultas Sains dan Matematika"
 UNIVERSITAS = "Universitas Kristen Satya Wacana Salatiga"
@@ -26,7 +28,8 @@ st.markdown(f"""
         <img src="data:image/png;base64,{base64.b64encode(open('logo_fakultas.png', 'rb').read()).decode()}" width="100" />
     </div>
     <div style="flex-grow: 1; text-align: left; margin-left: 10px;">
-        <h2 style="margin: 0; color: #435da3;">{NAMA} • {NIM}</h2>
+        <h2 style="margin: 0; color: #435da3;">{NAMA_1} • {NIM_1}</h2>
+        <h2 style="margin: 0; color: #435da3;">{NAMA_2} • {NIM_2}</h2>
         <p style="margin: 4px 0; color: #435da3;"><strong>{PRODI} • {FAKULTAS}</strong></p>
         <p style="margin: 0; color: #435da3;">{UNIVERSITAS}</p>       
     </div>
